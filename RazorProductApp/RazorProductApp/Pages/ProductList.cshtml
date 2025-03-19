@@ -1,0 +1,35 @@
+﻿@page
+@model RazorProductApp.Pages.ProductListModel
+@using RazorProductApp.Models
+
+<h2>Ürün Listesi</h2>
+<table border="1">
+	<tr>
+		<th>ID</th>
+		<th>Ürün Adı</th>
+		<th>Fiyat</th>
+		<th>Stok Durumu</th>
+	</tr>
+	@foreach (var product in Model.Products)
+	{
+		<tr>
+			<td>@product.Id</td>
+			<td>@product.Name</td>
+			<td>@product.Price ₺</td>
+			<td>
+				@if(product.Stock > 0)
+				{
+					<span style="color: green;">Stokta var (@product.Stock)</span>
+				}
+				else
+				{
+					<span style="color: red;">Stokta yok!</span>
+				}
+			</td>
+
+		</tr>
+	}
+</table>
+<form method="get" action="/Product/Add">
+	<button type="submit">Yeni Ürün Ekle</button>
+</form>

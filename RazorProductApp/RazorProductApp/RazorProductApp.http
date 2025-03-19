@@ -1,0 +1,6 @@
+@RazorProductApp_HostAddress = http://localhost:5077
+
+GET {{RazorProductApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
