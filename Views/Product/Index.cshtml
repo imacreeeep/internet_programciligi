@@ -1,0 +1,32 @@
+﻿@model List<intpr_uyg1.Models.Product>
+
+<!DOCTYPE
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ürün listesi</title>
+</head>
+<body>
+    <h2>ürün listesi</h2>
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+
